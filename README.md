@@ -1,5 +1,7 @@
 # DISCOUNT Service
 
+![Diagram Description](Assets/DISCOUNT.Diagram.png)
+
 The DISCOUNT solution provides a gRPC-based service for generating and managing discount codes. It consists of a server application (`DISCOUNT.Server`) and a client application (`DISCOUNT.Client`).
 
 ## Features
