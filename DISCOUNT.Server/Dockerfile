@@ -7,9 +7,10 @@ WORKDIR /src
 
 ENV PROTOBUF_TOOLS_OS=linux
 ENV PROTOBUF_TOOLS_CPU=x64
+ENV REDIS_CONNECTION_STRING="redis:6379"
 
 COPY DISCOUNT.Server/DISCOUNT.Server.csproj .
-COPY Protos .
+COPY DISCOUNT.Server/Protos .
 COPY Directory.Packages.props ./
 
 RUN dotnet restore

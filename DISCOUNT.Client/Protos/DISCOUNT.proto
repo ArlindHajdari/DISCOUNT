@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "DISCOUNT.Client";
+
+package DISCOUNT;
+
+service DiscountService {
+  rpc GenerateDiscountCodes (GenerationRequest) returns (GenerationResponse);
+  rpc UseDiscountCode (UseCodeRequest) returns (UseCodeResponse);
+}
+
+message GenerationRequest {
+  uint32 Count = 1;
+  uint32 Length = 2;
+}
+
+message GenerationResponse {
+  bool Result = 1;
+}
+
+message UseCodeRequest {
+  string Code = 1;
+}
+
+message UseCodeResponse {
+  uint32 Result = 1;
+}
